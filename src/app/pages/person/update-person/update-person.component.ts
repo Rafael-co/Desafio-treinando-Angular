@@ -18,6 +18,7 @@ person:Person = {
   age: 0,
   email: ''
 }
+user:string = " "
 constructor(private personService:PersonService ,
   private route: ActivatedRoute,
   private router: Router
@@ -34,6 +35,7 @@ constructor(private personService:PersonService ,
     this.personService.findById(this.idPerson).subscribe(
       result =>{
         this.person = result;
+        this.user = result.name
 
 
       }

@@ -1,7 +1,7 @@
 <div class="container-fluid py-5 ">
     <form #updateForm="ngForm"  data-bs-theme="dark" class=" w-50  rounded  mx-auto p-2" >
         <h1 class="text-white mt-3">Atualizar cadastro do usuário: </h1>
-        <h2 class="text-white mb-3"><i class="fa-regular fa-user"></i> {{person.name}}</h2>
+        <h2 class="text-white mb-3"><i class="fa-regular fa-user"></i> {{user}}</h2>
         <div class="mb-3">
             <label for="inputNome" class="form-label text-white">Nome</label>
             <input type="text" name="name" class="form-control" id="inputNome" [(ngModel)] = person.name required >
@@ -39,6 +39,7 @@
   
           </select>
        
-        <button type="submit" class="btn btn-outline-light" (click)="onSubmit(updateForm)" [disabled]="!updateForm.valid">Submit</button>
+        <button type="submit" class="btn btn-outline-light" (click)="onSubmit(updateForm)" [disabled]="!updateForm.valid">Salvar</button>
+        <button type="button"class="btn ms-4 btn-outline-danger" routerLink="/people">Cancelar</button>
     </form>
 </div>
