@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { TableComponent } from './components/list/table.component';
+import { TableComponent } from './components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
