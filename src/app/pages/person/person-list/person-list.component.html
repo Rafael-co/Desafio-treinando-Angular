@@ -1,0 +1,6 @@
+<div class="container">
+
+    <app-table [people]="profiles" (reloadPage)="reloadPage($event)"></app-table>
+    <button  class="offset-md-11 btn btn-outline-success" [routerLink]="['/new']" ><i class="fa-solid fa-plus bg-transparent"></i></button>
+</div>
+

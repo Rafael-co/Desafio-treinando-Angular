@@ -1,0 +1,31 @@
+
+    <h1 class="mt-2 text-white">Pessoas</h1>
+    <table class=" mx-auto p-2  table table-dark table-striped ">
+      <thead>
+        <tr>
+          <th scope="col" >ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Perfil</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Ativo</th>
+          <th scope="col">País</th>
+          <th scope="col">Nível de Experência</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-start" *ngFor="let person of people">
+          <th scope="row">{{person.id}}</th>
+          <td>{{person.name}}</td>
+          <td>{{person.role}}</td>
+          <td>{{person.email||"N/A"}}</td>
+          <td>{{person.age}}</td>
+          <td>{{person.isActive? "Ativo":"Desativo"}}</td>
+          <td>{{person.country||"N/A"}}</td>
+          <td>{{person.experience||"N/A"}}</td>
+          <td><button  [routerLink]="['/edit',person.id]" class=" btn btn-outline text-primary me-2" ><i class=" fa-regular fa-pen-to-square"></i></button> <button class="btn btn-outline text-danger" (click)="delete(person.id,person.name)"><i class="fa-solid fa-user-xmark"></i></button></td>  
+        </tr>
+        
+      </tbody>
+  </table>

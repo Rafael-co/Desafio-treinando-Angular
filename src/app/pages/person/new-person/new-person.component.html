@@ -1,0 +1,44 @@
+<div class="container-fluid py-5 ">
+    <form (ngSubmit)="onSubmit()" data-bs-theme="dark" class=" w-50  rounded  mx-auto p-2" [formGroup]="personForm">
+        <h1 class="text-white">Cadastre uma nova Pessoa</h1>
+
+        <div class="mb-3">
+            <label for="inputNome" class="form-label text-white">Nome</label>
+            <input type="text" class="form-control" id="inputNome" formControlName = 'name' >
+         
+        </div>
+        <div class="mb-3">
+            <label for="inputPerfil" class="form-label text-white">Perfil</label>
+            <input type="text" class="form-control" id="inputPerfil"formControlName = 'role' >
+         
+        </div>
+        <div class="mb-3">
+            <label for="inputIdade" class="form-label text-white">Idade</label>
+            <input type="number" class="form-control" id="inputIdade" formControlName = 'age' >
+         
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label text-white">Email</label>
+            <input type="email" class="form-control" id="inputEmail"formControlName = 'email' >
+         
+        </div>
+        <div class="mb-3">
+            <label for="inputPais" class="form-label text-white">País</label>
+            <input type="text" class="form-control" id="inputPais"formControlName = 'country' >
+         
+        </div>
+        <div class="mb-3">
+            <label for="inputExperience" class="form-label text-white">Nível de Experiência</label>
+            <input type="text" class="form-control" id="inputExperience" formControlName = 'experience' >
+         
+        </div>
+        <label for="selectAtivo" class="form-label text-white">Ativo</label>
+        <select  id="selectAtivo" class="form-select form-select-lg mb-3" aria-label="Large select example" formControlName = 'isActive'>
+            <option [value]="true">Ativo</option>
+            <option [value]="false">Desativo</option>
+  
+          </select>
+       
+        <button type="submit" class="btn btn-outline-light" [disabled]="!personForm.valid">Submit</button>
+    </form>
+</div>

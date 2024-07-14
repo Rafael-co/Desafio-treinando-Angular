@@ -1,0 +1,24 @@
+{
+  "profiles": [
+    {
+      "id": "ce7a",
+      "name": "Lucas",
+      "role": "developer",
+      "age": 10,
+      "email": "lucas@lucas.com",
+      "country": "EUA",
+      "experience": "senior",
+      "isActive": "false"
+    },
+    {
+      "id": "68ea",
+      "name": "Rafael Camilo de Oliveira",
+      "role": "Admin",
+      "age": 21,
+      "email": "rafael.camilo@camilo.com",
+      "isActive": "false",
+      "experience": "asdad",
+      "country": "Brasil"
+    }
+  ]
+}
