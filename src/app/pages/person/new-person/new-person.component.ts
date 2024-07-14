@@ -16,9 +16,9 @@ export class NewPersonComponent {
      private router: Router) {}
   
   personForm :FormGroup=  this.formBuilder.group( {
-    name: ['', Validators.required],
-    role: ['', Validators.required],
-    age: [0, [Validators.required, Validators.min(1)]],
+    name: ['', Validators.required,Validators.minLength(4)],
+    role: ['', Validators.required,Validators.minLength(4)],
+    age: [0, [Validators.required, Validators.min(15)]],
     email :['', [Validators.required, Validators.email]],
     isActive:[''],
     experience:[""],

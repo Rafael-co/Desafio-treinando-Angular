@@ -4,23 +4,30 @@
 
         <div class="mb-3">
             <label for="inputNome" class="form-label text-white">Nome</label>
-            <input type="text" class="form-control" id="inputNome" formControlName = 'name' >
-         
+            <input type="text" class="form-control" id="inputNome"  formControlName = 'name' >
+            <span class="text-danger fw-light"   *ngIf="personForm.get('name')?.getError('required') && personForm.get('name')?.touched">Este campo é obrigatório</span>
+            <span class="text-danger fw-light"  *ngIf="personForm.get('name')?.getError('minlength') && personForm.get('name')?.touched">Quantidade miníma de caracteres não atingida (4)</span>
+            
         </div>
         <div class="mb-3">
             <label for="inputPerfil" class="form-label text-white">Perfil</label>
             <input type="text" class="form-control" id="inputPerfil"formControlName = 'role' >
-         
+            <span class="text-danger fw-light"  *ngIf="personForm.get('role')?.getError('required') && personForm.get('role')?.touched">Este campo é obrigatório</span>
+            <span class="text-danger fw-light"  *ngIf="personForm.get('role')?.getError('minlength') && personForm.get('role')?.touched">Quantidade miníma de caracteres não atingida(4)</span>
+
         </div>
         <div class="mb-3">
             <label for="inputIdade" class="form-label text-white">Idade</label>
             <input type="number" class="form-control" id="inputIdade" formControlName = 'age' >
+            <span class="text-danger fw-light" *ngIf="personForm.get('age')?.getError('required')&& personForm.get('age')?.touched">Este campo é obrigatório</span>
+            <span class="text-danger fw-light" *ngIf="personForm.get('age')?.getError('min') && personForm.get('age')?.touched">Não é possível cadastrar uma pessoa com menos de 15 anos</span>
          
         </div>
         <div class="mb-3">
             <label for="inputEmail" class="form-label text-white">Email</label>
             <input type="email" class="form-control" id="inputEmail"formControlName = 'email' >
-         
+            <span class="text-danger fw-light" *ngIf="personForm.get('email')?.getError('required') && personForm.get('email')?.touched">Este campo é obrigatório</span>
+            <span class="text-danger fw-light" *ngIf="personForm.get('email')?.getError('email') && personForm.get('email')?.touched">Este campo deve possuir um e-mail válido</span>
         </div>
         <div class="mb-3">
             <label for="inputPais" class="form-label text-white">País</label>

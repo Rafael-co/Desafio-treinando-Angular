@@ -4,23 +4,28 @@
         <h2 class="text-white mb-3"><i class="fa-regular fa-user"></i> {{user}}</h2>
         <div class="mb-3">
             <label for="inputNome" class="form-label text-white">Nome</label>
-            <input type="text" name="name" class="form-control" id="inputNome" [(ngModel)] = person.name required >
-         
+            <input type="text" name="name" class="form-control"  #inputNome = "ngModel" id="inputNome" [(ngModel)] = person.name required minlength="4">
+          
+            <span class="text-danger fw-light" *ngIf="inputNome.errors?.['minlength']">Quantidade de caracteres insuficiente</span>
+            <span class="text-danger fw-light" *ngIf="inputNome.errors?.['required']">Esse campo é obrigatório </span>
         </div>
         <div class="mb-3">
             <label for="inputPerfil" class="form-label text-white">Perfil</label>
-            <input type="text" name="role" class="form-control" id="inputPerfil" [(ngModel)] = person.role required >
+            <input type="text" name="role" class="form-control" #inputRole = "ngModel" id="inputPerfil" #inputPerfil = "ngModel" [(ngModel)] = person.role required >
+            <span class="text-danger fw-light" *ngIf="inputRole.errors?.['required']">Esse campo é obrigatório </span>
          
         </div>
         <div class="mb-3">
             <label for="inputIdade" class="form-label text-white">Idade</label>
-            <input type="number" name="age" class="form-control" id="inputIdade"[(ngModel)] = person.age required >
-         
+            <input type="number" name="age" class="form-control" id="inputIdade"[(ngModel)] = person.age required #inputAge = "ngModel">
+            <span class="text-danger fw-light" *ngIf="inputAge.errors?.['required']">Esse campo é obrigatório </span>
         </div>
         <div class="mb-3">
             <label for="inputEmail" class="form-label text-white">Email</label>
-            <input type="email" name="email" class="form-control" id="inputEmail" [(ngModel)] = person.email required>
-         
+            <input type="email" name="email" class="form-control" id="inputEmail" [(ngModel)] = person.email 
+            #inputEmail = "ngModel" required>
+            <span class="text-danger fw-light" *ngIf="inputEmail.errors?.['required']">Esse campo é obrigatório </span>
+
         </div>
         <div class="mb-3">
             <label for="inputPais" class="form-label text-white">País</label>
