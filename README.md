@@ -1,27 +1,36 @@
-# People
+# Cadastro de pessoas 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+## Objetivo
 
-## Development server
+O projeto de controle de pessoas tem por objetivo colocar em pratica todo o conhecimento visto em aula.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Ferramentas e Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **typescript**
+    - Linguagem de programação typada.
 
-## Build
+- **Angular.16**
+    - Framework que facilita a criação de paginas SPA .
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Github**
+    - Gerenciador de repositório de software baseado em git.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### informações de execução local
+1. Clone ou baixe o projeto em sua maquina,
+2. Abra a pasta no CMD ou git bash 
+3. Digite o comando npm i .
+4.No terminal, você irá digitar ng s -o 
+5.Abra outro terminal na mesma pasta digite npm run server
 
-## Further help
+### Execução com o stackblitz
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1.Clique no link: https://stackblitz.com/~/github.com/Rafael-co/Desafio-treinando-Angular
+2.deixe ele instalar as dependências
+3.abra outro terminal e digite npm run dev 
+5. ele irá abrir ao lado do editor de codigo
